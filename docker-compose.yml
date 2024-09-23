@@ -1,23 +1,5 @@
-version: '1'
+version: '2'
 services:
-  db:
-    image: postgis/postgis
-    build:
-      context: .
-      args:
-        - db_name=notifications
-      dockerfile: Dockerfile_postgres
-    ports:
-      - "25432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=12345
-      - POSTGRES_DB=notifications
-      - POSTGRES_TEST_DB=notifications_test
-    networks:
-      notification_net:
-        ipv4_address: 192.168.255.10
-
   web:
     build: .
     command: ./start
@@ -30,7 +12,6 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - db
       - redis
     networks:
       notification_net:
@@ -41,27 +22,12 @@ services:
       - DB_NAME=notifications
       - DB_HOST=db
       - REDIS_SERVER=redis://redis:6379
-
-  sidekiq:
-    build: .
-    command: bundle exec sidekiq
-    volumes:
-      - .:/notifications-api
-    depends_on:
-      - db
-      - redis
-    networks:
-      notification_net:
-        ipv4_address: 192.168.255.14
-    environment:
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=12345
-      - DB_NAME=notifications
-      - DB_HOST=db
-      - REDIS_SERVER=redis://redis:6379
-
+  
   redis:
     image: redis
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf  # Montar el archivo de configuración
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]  # Usar el archivo de configuración
     networks:
       notification_net:
         ipv4_address: 192.168.255.12
