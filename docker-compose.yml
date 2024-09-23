@@ -1,0 +1,64 @@
+version: '1'
+services:
+  db:
+    image: postgis/postgis
+    build:
+      context: .
+      args:
+        - db_name=notifications
+      dockerfile: Dockerfile_postgres
+    ports:
+      - "25432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=notifications
+      - POSTGRES_TEST_DB=notifications_test
+    networks:
+      notification_net:
+        ipv4_address: 192.168.255.10
+  web:
+    build: .
+    command: ./start
+    cap_add:
+      - SYS_PTRACE
+    volumes:
+      - .:/notifications-api
+    volumes_from:
+      - ruby-bundle
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - redis
+    networks:
+      notification_net:
+        ipv4_address: 192.168.255.11
+    environment:
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=12345
+      - DB_NAME=notifications
+      - DB_HOST=db
+      - REDIS_SERVER=redis://redis:6379
+  redis:
+    image: redis
+    networks:
+      notification_net:
+        ipv4_address: 192.168.255.12
+  ruby-bundle:
+    image: busybox
+    volumes:
+      - /ruby-bundle
+    networks:
+      notification_net:
+        ipv4_address: 192.168.255.13
+networks:
+  notification_net:
+      driver: bridge
+      driver_opts:
+        com.docker.network.driver.mtu: 1400
+      ipam:
+        driver: default
+        config:
+          - subnet: 192.168.255.8/29
+            gateway: 192.168.255.9

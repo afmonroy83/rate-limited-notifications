@@ -1,0 +1,6 @@
+# Versioning has this structure: postgis/postgis: <postgres_version>-<postgis_version>
+# Ref: https://registry.hub.docker.com/r/postgis/postgis
+FROM postgis/postgis:14-3.3
+ARG db_name
+ENV POSTGRES_DB $db_name
+COPY create-dbs.sh /docker-entrypoint-initdb.d/

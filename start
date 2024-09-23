@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Create the log folder for the unit tests
+mkdir -p log
+
+# add a DNS entry for the IP address of the host machine, if it does not exist
+grep dockerhost /etc/hosts || /sbin/ip route|awk '/default/ { print $3 " dockerhost" }' >> /etc/hosts
+
+rm -f tmp/pids/server.pid
+
+gem update bundler --no-document \
+    && gem clean bundler \
+    && bundle update --bundler \
+
+bundle check || bundle install
+# bundle exec rails db:migrate RAILS_ENV=development
+# bundle exec sidekiq -C ./config/sidekiq.yml -L ./tmp/sidekiq.log -d
+# bundle exec rails server --port=3000 --binding="0.0.0.0"
+while [ 1 ]; do
+    date
+    sleep 30
+done
