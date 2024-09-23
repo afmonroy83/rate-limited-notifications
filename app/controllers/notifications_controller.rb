@@ -1,4 +1,6 @@
 class NotificationsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create]
+
   def create
     type = notification_params[:type]
     user_id = notification_params[:user_id]
