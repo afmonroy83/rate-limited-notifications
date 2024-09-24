@@ -25,5 +25,64 @@ Asegúrate de tener instalados los siguientes componentes en tu máquina:
    Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone git@github.com:usuario/repo.git
-   cd repo
+   git clone https://github.com/afmonroy83/rate-limited-notifications.git
+   cd rate-limited-notifications
+2. **Crear y levantar los contenedores con Docker Compose**
+   Ejecuta el siguiente comando para construir y levantar todos los servicios (base de datos, Redis, web, y Sidekiq):
+      ```bash
+      docker-compose up --build
+      ```
+   Esto levantará la aplicación Rails, la base de datos PostgreSQL, el servidor Redis y el servicio de Sidekiq.
+
+3. **Configurar la base de datos**
+   Abre una nueva terminal y corre las migraciones para la base de datos:
+   ```bash
+      docker-compose run web rake db:create db:migrate
+   ```
+   Esto creará y migrará la base de datos dentro del contenedor de Docker.
+5. **Acceder a la aplicación**
+   La aplicación estará disponible en tu navegador en `http://localhost:3000`.
+
+## Servicios
+El proyecto incluye los siguientes servicios principales:
+
+- **Web**: Aplicación Rails que maneja las notificaciones.
+- **Sidekiq**: Procesador de trabajos en segundo plano para manejar las colas de notificaciones.
+- **Redis**: Almacén de datos en memoria que Sidekiq utiliza para manejar las colas.
+- **PostgreSQL**: Base de datos relacional que almacena la información de la aplicación.
+
+## Panel de Sidekiq
+Si quieres monitorear los trabajos en cola de Sidekiq, puedes acceder al panel de Sidekiq en `http://localhost:3000/sidekiq.`
+## Variables de entorno
+
+Las siguientes variables de entorno son necesarias para configurar la conexión con los servicios:
+
+- `DB_USERNAME`: Nombre de usuario de la base de datos (por defecto: `postgres`).
+- `DB_PASSWORD`: Contraseña de la base de datos (por defecto: `12345`).
+- `DB_NAME`: Nombre de la base de datos (por defecto: `notifications`).
+- `DB_HOST`: Host de la base de datos (por defecto: `db`).
+- `REDIS_SERVER`: URL del servidor Redis (por defecto: `redis://redis:6379`).
+- 
+Estas variables ya están configuradas en el archivo docker-compose.yml.
+
+##  Como correr los tests
+Para correr las pruebas del proyecto, usa el siguiente comando dentro del contenedor web:
+
+1. Abre una nueva terminal.
+2. Ejecuta el siguiente comando para correr las pruebas:
+   ```bash
+      docker-compose run web rspec
+      ```
+Esto ejecutará todas las pruebas unitarias y de integración que están configuradas para el proyecto. Las pruebas están escritas utilizando el framework RSpec.
+
+### Migrar la base de datos de pruebas
+
+Asegúrate de que la base de datos de pruebas está correctamente configurada antes de correr los tests:
+
+   ```bash
+      docker-compose run web rake db:test:prepare
+   ```
+
+## Problemas comunes
+* **Sidekiq no arranca**: Asegúrate de que Redis está corriendo correctamente. Verifica el contenedor de Redis con `docker-compose ps`.
+* **Error al conectar con la base de datos**: Verifica que las variables de entorno de la base de datos en el archivo `docker-compose.yml` coinciden con la configuración de tu proyecto.
