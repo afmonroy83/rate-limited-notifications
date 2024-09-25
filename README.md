@@ -56,10 +56,7 @@ Asegúrate de tener instalados los siguientes componentes en tu máquina:
       bundle exec rails server --port=3000 --binding="0.0.0.0"
    ```
 6. ** Herramientas para testear **
-  * Enviar una notificacion tipo status:
-      ```
-         curl -X POST http://localhost:3000/notifications -H "Content-Type: application/json" -d '{"type":"status", "user_id":"user@example.com", "message":"account status"}'
-      ```
+
    * Enviar una notificacion tipo **status**:
       ```
          curl -X POST http://localhost:3000/notifications -H "Content-Type: application/json" -d '{"type":"status", "user_id":"user@example.com", "message":"account status"}'
