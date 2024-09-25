@@ -2,7 +2,7 @@ FROM ruby:3.2
 
 RUN apt-get -o Acquire::Check-Valid-Until=false update
 
-RUN apt-get install --assume-yes build-essential libpq-dev nodejs graphviz postgresql-contrib
+RUN apt-get install --assume-yes build-essential libpq-dev nodejs graphviz postgresql-contrib redis-tools
 
 ENV app /notifications-api
 
