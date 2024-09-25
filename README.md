@@ -37,11 +37,48 @@ Asegúrate de tener instalados los siguientes componentes en tu máquina:
 3. **Configurar la base de datos**
    Abre una nueva terminal y corre las migraciones para la base de datos:
    ```bash
-      docker-compose run web rake db:create db:migrate
+      docker compose exec web bash
+      bundle exec rails db:migrate
    ```
    Esto creará y migrará la base de datos dentro del contenedor de Docker.
+4. **Inicia sidekiq**
+    Abre una nueva terminal para iniciar sidekiq:
+   ```bash
+      docker compose exec web bash
+      bundle exec rails sidekiq
+   ```
+      
+     
 5. **Acceder a la aplicación**
-   La aplicación estará disponible en tu navegador en `http://localhost:3000`.
+   La aplicación estará disponible en tu navegador en `http://localhost:3000` corriendo el siguiente comando:
+   ```bash
+      docker compose exec web bash
+      bundle exec rails server --port=3000 --binding="0.0.0.0"
+   ```
+6. ** Herramientas para testear **
+  * Enviar una notificacion tipo status:
+      ```
+         curl -X POST http://localhost:3000/notifications -H "Content-Type: application/json" -d '{"type":"status", "user_id":"user@example.com", "message":"account status"}'
+      ```
+   * Enviar una notificacion tipo **status**:
+      ```
+         curl -X POST http://localhost:3000/notifications -H "Content-Type: application/json" -d '{"type":"status", "user_id":"user@example.com", "message":"account status"}'
+      ```
+   * Enviar una notificacion tipo **news**:
+      ```
+      curl -X POST http://localhost:3000/notifications -H "Content-Type: application/json" -d '{"type":"news", "user_id":"user@example.com", "message":"you have news!"}'
+      ```
+   * Enviar una notificacion tipo **marketing**:
+      ```
+      curl -X POST http://localhost:3000/notifications -H "Content-Type: application/json" -d '{"type":"marketing", "user_id":"user@example.com", "message":"the clickbait is here!"}'
+      ```
+   * Ejemplo de una solicitud invalida:
+      ```
+      curl -X POST http://localhost:3000/notifications \
+        -H "Content-Type: application/json" \
+        -d '{"notification": {"type": "invalid_type", "user_id": "user@example.com", "message": "Test message"}}'
+      ```
+   
 
 ## Servicios
 El proyecto incluye los siguientes servicios principales:
@@ -71,7 +108,8 @@ Para correr las pruebas del proyecto, usa el siguiente comando dentro del conten
 1. Abre una nueva terminal.
 2. Ejecuta el siguiente comando para correr las pruebas:
    ```bash
-      docker-compose run web rspec
+      docker compose exec web bash
+      bundle exec rspec
       ```
 Esto ejecutará todas las pruebas unitarias y de integración que están configuradas para el proyecto. Las pruebas están escritas utilizando el framework RSpec.
 
@@ -80,9 +118,11 @@ Esto ejecutará todas las pruebas unitarias y de integración que están configu
 Asegúrate de que la base de datos de pruebas está correctamente configurada antes de correr los tests:
 
    ```bash
-      docker-compose run web rake db:test:prepare
+      docker compose exec web bash
+      bundle exec rails db:migrate
    ```
 
 ## Problemas comunes
 * **Sidekiq no arranca**: Asegúrate de que Redis está corriendo correctamente. Verifica el contenedor de Redis con `docker-compose ps`.
 * **Error al conectar con la base de datos**: Verifica que las variables de entorno de la base de datos en el archivo `docker-compose.yml` coinciden con la configuración de tu proyecto.
+
