@@ -37,11 +37,25 @@ Asegúrate de tener instalados los siguientes componentes en tu máquina:
 3. **Configurar la base de datos**
    Abre una nueva terminal y corre las migraciones para la base de datos:
    ```bash
-      docker-compose run web rake db:create db:migrate
+      docker compose exec web bash
+      bundle exec rails db:migrate
    ```
    Esto creará y migrará la base de datos dentro del contenedor de Docker.
-5. **Acceder a la aplicación**
-   La aplicación estará disponible en tu navegador en `http://localhost:3000`.
+4. ** Inicia sidekiq**
+    Abre una nueva terminal para iniciar sidekiq:
+   ``bash
+      docker compose exec web bash
+      bundle exec rails sidekiq
+   ```
+      
+     
+6. **Acceder a la aplicación**
+   La aplicación estará disponible en tu navegador en `http://localhost:3000` corriendo el siguiente comando:
+   ```bash
+      docker compose exec web bash
+      bundle exec rails server --port=3000 --binding="0.0.0.0"
+   ```
+   
 
 ## Servicios
 El proyecto incluye los siguientes servicios principales:
@@ -80,7 +94,8 @@ Esto ejecutará todas las pruebas unitarias y de integración que están configu
 Asegúrate de que la base de datos de pruebas está correctamente configurada antes de correr los tests:
 
    ```bash
-      docker-compose run web rake db:test:prepare
+      docker compose exec web bash
+      bundle exec rails db:migrate
    ```
 
 ## Problemas comunes
