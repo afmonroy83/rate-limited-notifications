@@ -2,6 +2,6 @@
 class NotificationGateway
   def send(user_id, message)
     # logic to send de email
-    puts "Enviando mensaje a #{user_id}: #{message}"
+    puts "send message to #{user_id}: #{message}"
   end
 end
