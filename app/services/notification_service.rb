@@ -8,13 +8,18 @@ class NotificationService
 
   def initialize(gateway = NotificationGateway.new)
     @gateway = gateway
-    @redis = Redis.new
+    @redis = Redis.new(host: "redis", port: 6379)
   end
 
   def send_notification(type, user_id, message)
     rate_limit = RATE_LIMITS[type]
     if rate_limit && over_limit?(type, user_id, rate_limit)
-      puts "Rate limit exceeded for #{user_id} on #{type}"
+      # If the limit has been exceeded, queue the notification
+      wait_time = time_until_limit_resets(type, user_id, rate_limit[:period])
+      puts "Rate limit exceeded for #{user_id} on #{type}, re-enqueuing notification in #{wait_time} seconds"
+
+      # Schedule notification to be sent when period passes
+      NotificationJob.set(wait: wait_time).perform_later(type, user_id, message)
       return
     end
 
@@ -40,5 +45,13 @@ class NotificationService
       @redis.expire(key, period)
     end
   end
+
+  # Estimate the time remaining until another notification can be sent
+  def time_until_limit_resets(type, user_id, period)
+    key = "#{user_id}:#{type}"
+    ttl = @redis.ttl(key) # TTL: Time left until the counter expires
+    ttl > 0 ? ttl : period
+  end
+
 end
 
