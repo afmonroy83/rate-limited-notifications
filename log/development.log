@@ -3879,3 +3879,1397 @@ Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cache
 /ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
 /ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
 /ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <top (required)> at /notifications-api/config/environment.rb:5)
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) enqueued at 2024-09-23T14:02:38.670811307Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Error performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) in 9.23ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) enqueued at 2024-09-23T14:02:38.670811307Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Error performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) in 5.42ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) enqueued at 2024-09-23T14:02:38.670811307Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Error performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) in 22.03ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) enqueued at 2024-09-23T14:02:38.670811307Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [544c232f-6060-41aa-90ea-9a2146437ed0] Error performing NotificationJob (Job ID: 544c232f-6060-41aa-90ea-9a2146437ed0) from Sidekiq(default) in 2.4ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <top (required)> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+Started POST "/notifications" for 192.168.255.9 at 2024-09-23 14:16:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News", "notification"=>{"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) to Sidekiq(default) with arguments: "news", "user1", "Hello News"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 75ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 38.8ms)
+
+
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) enqueued at 2024-09-23T14:16:24.566186490Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Error performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) in 4.81ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) enqueued at 2024-09-23T14:16:24.566186490Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Error performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) in 2.22ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) enqueued at 2024-09-23T14:16:24.566186490Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Error performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) in 1.69ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) enqueued at 2024-09-23T14:16:24.566186490Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Error performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) in 1.89ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) enqueued at 2024-09-23T14:16:24.566186490Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Error performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) in 1.92ms: Redis::CannotConnectError (Connection refused - connect(2) for 127.0.0.1:6379 (redis://localhost:6379)):
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `__connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:1217:in `connect_nonblock'
+/usr/local/lib/ruby/3.2.0/socket.rb:60:in `connect_internal'
+/usr/local/lib/ruby/3.2.0/socket.rb:141:in `connect'
+/usr/local/lib/ruby/3.2.0/socket.rb:645:in `block in tcp'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `each'
+/usr/local/lib/ruby/3.2.0/socket.rb:231:in `foreach'
+/usr/local/lib/ruby/3.2.0/socket.rb:635:in `tcp'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:119:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/ruby_connection.rb:51:in `initialize'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `new'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:746:in `block in connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client/middlewares.rb:12:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:745:in `connect'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:732:in `raw_connection'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:697:in `ensure_connected'
+/ruby-bundle/ruby/3.2.0/gems/redis-client-0.22.2/lib/redis_client.rb:292:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/client.rb:90:in `call_v'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:152:in `block in send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `synchronize'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis.rb:151:in `send_command'
+/ruby-bundle/ruby/3.2.0/gems/redis-5.3.0/lib/redis/commands/strings.rb:191:in `get'
+/notifications-api/app/services/notification_service.rb:32:in `over_limit?'
+/notifications-api/app/services/notification_service.rb:16:in `send_notification'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <top (required)> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+Started POST "/notifications" for 192.168.255.9 at 2024-09-23 14:21:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News", "notification"=>{"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: eed51d07-291c-4250-a682-70d56c0c9fd7) to Sidekiq(default) with arguments: "news", "user1", "Hello News"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 31ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 4.3ms)
+
+
+[ActiveJob] [NotificationJob] [eed51d07-291c-4250-a682-70d56c0c9fd7] Performing NotificationJob (Job ID: eed51d07-291c-4250-a682-70d56c0c9fd7) from Sidekiq(default) enqueued at 2024-09-23T14:21:44.871549206Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [eed51d07-291c-4250-a682-70d56c0c9fd7] Error performing NotificationJob (Job ID: eed51d07-291c-4250-a682-70d56c0c9fd7) from Sidekiq(default) in 2.32ms: SyntaxError (/notifications-api/app/services/notification_service.rb:11: syntax error, unexpected label
+    @redis = (host: "redis", port: 6379)
+              ^~~~~
+):
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+<internal:/usr/local/lib/ruby/3.2.0/rubygems/core_ext/kernel_require.rb>:38:in `require'
+/ruby-bundle/ruby/3.2.0/gems/bootsnap-1.18.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/ruby-bundle/ruby/3.2.0/gems/zeitwerk-2.6.18/lib/zeitwerk/kernel.rb:26:in `require'
+/notifications-api/app/jobs/notification_job.rb:6:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:68:in `block in _perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/i18n-1.14.6/lib/i18n.rb:353:in `with_locale'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/core_ext/time/zones.rb:65:in `use_zone'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:67:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:32:in `_perform_job'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:51:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:13:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:40:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `block in instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/notifications.rb:210:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:39:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activerecord-7.2.1/lib/active_record/railties/job_runtime.rb:11:in `instrument'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/instrumentation.rb:26:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `block in perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `block in tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:38:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/tagged_logging.rb:138:in `tagged'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:39:in `tag_logger'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/logging.rb:32:in `perform_now'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:29:in `block in execute'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:79:in `block (4 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/railtie.rb:78:in `block (3 levels) in <class:Railtie>'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/execution.rb:27:in `execute'
+/ruby-bundle/ruby/3.2.0/gems/activejob-7.2.1/lib/active_job/queue_adapters/sidekiq_adapter.rb:70:in `perform'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:220:in `execute_job'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:185:in `block (4 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:180:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job/interrupt_handler.rb:9:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:183:in `block in traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:26:in `track'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/metrics/tracking.rb:134:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:182:in `traverse'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/middleware/chain.rb:173:in `invoke'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:184:in `block (3 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:145:in `block (6 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:118:in `local'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:144:in `block (5 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:16:in `block in call'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:77:in `block in wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/execution_wrapper.rb:91:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/activesupport-7.2.1/lib/active_support/reloader.rb:74:in `wrap'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/rails.rb:15:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:139:in `block (4 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:281:in `stats'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:134:in `block (3 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:23:in `call'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:133:in `block (2 levels) in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_retry.rb:85:in `global'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:132:in `block in dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/job_logger.rb:50:in `prepare'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:131:in `dispatch'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:183:in `block (2 levels) in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:182:in `block in process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `handle_interrupt'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:181:in `process'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:86:in `process_one'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/processor.rb:76:in `run'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:10:in `watchdog'
+/ruby-bundle/ruby/3.2.0/gems/sidekiq-7.3.2/lib/sidekiq/component.rb:19:in `block in safe_thread'
+[ActiveJob] [NotificationJob] [eed51d07-291c-4250-a682-70d56c0c9fd7] Performing NotificationJob (Job ID: eed51d07-291c-4250-a682-70d56c0c9fd7) from Sidekiq(default) enqueued at 2024-09-23T14:21:44.871549206Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [eed51d07-291c-4250-a682-70d56c0c9fd7] Performed NotificationJob (Job ID: eed51d07-291c-4250-a682-70d56c0c9fd7) from Sidekiq(default) in 3.78ms
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <top (required)> at /notifications-api/config/environment.rb:5)
+Started POST "/notifications" for 192.168.255.9 at 2024-09-23 14:22:29 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News", "notification"=>{"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 591ff26b-cb78-47e1-94d5-a3159acf72b4) to Sidekiq(default) with arguments: "news", "user1", "Hello News"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+[ActiveJob] [NotificationJob] [591ff26b-cb78-47e1-94d5-a3159acf72b4] Performing NotificationJob (Job ID: 591ff26b-cb78-47e1-94d5-a3159acf72b4) from Sidekiq(default) enqueued at 2024-09-23T14:22:29.849517300Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [591ff26b-cb78-47e1-94d5-a3159acf72b4] Performed NotificationJob (Job ID: 591ff26b-cb78-47e1-94d5-a3159acf72b4) from Sidekiq(default) in 2.77ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-23 14:23:18 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News", "notification"=>{"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: e6cd2b4b-e9f9-457e-8623-96aebff7b054) to Sidekiq(default) with arguments: "news", "user1", "Hello News"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [e6cd2b4b-e9f9-457e-8623-96aebff7b054] Performing NotificationJob (Job ID: e6cd2b4b-e9f9-457e-8623-96aebff7b054) from Sidekiq(default) enqueued at 2024-09-23T14:23:18.574844199Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [e6cd2b4b-e9f9-457e-8623-96aebff7b054] Performed NotificationJob (Job ID: e6cd2b4b-e9f9-457e-8623-96aebff7b054) from Sidekiq(default) in 1.63ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-23 14:23:33 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News", "notification"=>{"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 48b395de-b9e1-499b-87b1-749016eb3ba8) to Sidekiq(default) with arguments: "news", "user1", "Hello News"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [48b395de-b9e1-499b-87b1-749016eb3ba8] Performing NotificationJob (Job ID: 48b395de-b9e1-499b-87b1-749016eb3ba8) from Sidekiq(default) enqueued at 2024-09-23T14:23:33.215109628Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [48b395de-b9e1-499b-87b1-749016eb3ba8] Performed NotificationJob (Job ID: 48b395de-b9e1-499b-87b1-749016eb3ba8) from Sidekiq(default) in 1.53ms
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Performing NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) enqueued at 2024-09-23T14:16:24.566186490Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [c37e927c-98bc-444e-bc7b-98e346eda7ae] Performed NotificationJob (Job ID: c37e927c-98bc-444e-bc7b-98e346eda7ae) from Sidekiq(default) in 1.3ms
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+Started GET "/" for 192.168.255.9 at 2024-09-25 01:32:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 10.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 24.9ms)
+
+
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:32:49 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}
+Completed 400 Bad Request in 19ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: notification):
+  
+app/controllers/notifications_controller.rb:18:in `notification_params'
+app/controllers/notifications_controller.rb:5:in `create'
+Started GET "/" for 192.168.255.9 at 2024-09-25 01:33:19 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-09-25 01:41:59.555842', '2024-09-25 01:41:59.555845') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+Started GET "/" for 192.168.255.9 at 2024-09-25 01:43:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+Started GET "/" for 192.168.255.9 at 2024-09-25 01:44:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /ruby-bundle/ruby/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 7.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 29.8ms)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:48:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: notification):
+  
+app/controllers/notifications_controller.rb:18:in `notification_params'
+app/controllers/notifications_controller.rb:5:in `create'
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:48:12 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: notification):
+  
+app/controllers/notifications_controller.rb:18:in `notification_params'
+app/controllers/notifications_controller.rb:5:in `create'
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:48:16 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: notification):
+  
+app/controllers/notifications_controller.rb:18:in `notification_params'
+app/controllers/notifications_controller.rb:5:in `create'
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:49:12 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"news", "user_id"=>"user1", "message"=>"Hello News", "notification"=>{"type"=>"news", "user_id"=>"user1", "message"=>"Hello News"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 3acf3c6f-064a-4f76-a1a7-6ed582482990) to Sidekiq(default) with arguments: "news", "user1", "Hello News"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /notifications-api/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <top (required)> at /notifications-api/config/environment.rb:5)
+[ActiveJob] [NotificationJob] [3acf3c6f-064a-4f76-a1a7-6ed582482990] Performing NotificationJob (Job ID: 3acf3c6f-064a-4f76-a1a7-6ed582482990) from Sidekiq(default) enqueued at 2024-09-25T01:49:12.066044313Z with arguments: "news", "user1", "Hello News"
+[ActiveJob] [NotificationJob] [3acf3c6f-064a-4f76-a1a7-6ed582482990] Performed NotificationJob (Job ID: 3acf3c6f-064a-4f76-a1a7-6ed582482990) from Sidekiq(default) in 5.99ms
+Started GET "/sidekiq" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/stylesheets/application.css" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/javascripts/base-charts.js" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/javascripts/application.js" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/javascripts/dashboard-charts.js" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/stylesheets/application-dark.css" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/images/status.png" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/javascripts/dashboard.js" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/javascripts/chart.min.js" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/javascripts/chartjs-plugin-annotation.min.js" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/images/favicon.ico" for 192.168.255.9 at 2024-09-25 01:53:54 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:53:59 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:54:04 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:54:07 +0000
+Started GET "/sidekiq/queues" for 192.168.255.9 at 2024-09-25 01:54:08 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:54:09 +0000
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:55:26 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 2be0caad-4808-487c-9a68-7b9f6789faad) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [2be0caad-4808-487c-9a68-7b9f6789faad] Performing NotificationJob (Job ID: 2be0caad-4808-487c-9a68-7b9f6789faad) from Sidekiq(default) enqueued at 2024-09-25T01:55:26.505128053Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [2be0caad-4808-487c-9a68-7b9f6789faad] Performed NotificationJob (Job ID: 2be0caad-4808-487c-9a68-7b9f6789faad) from Sidekiq(default) in 9.5ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:55:32 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 36147a9a-9bb4-4f3b-bda4-60ee1e74b182) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [36147a9a-9bb4-4f3b-bda4-60ee1e74b182] Performing NotificationJob (Job ID: 36147a9a-9bb4-4f3b-bda4-60ee1e74b182) from Sidekiq(default) enqueued at 2024-09-25T01:55:32.055579007Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [36147a9a-9bb4-4f3b-bda4-60ee1e74b182] Performed NotificationJob (Job ID: 36147a9a-9bb4-4f3b-bda4-60ee1e74b182) from Sidekiq(default) in 1.87ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:55:32 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: d1ef40df-21f0-4953-9a71-d0c5f5199d3c) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [d1ef40df-21f0-4953-9a71-d0c5f5199d3c] Performing NotificationJob (Job ID: d1ef40df-21f0-4953-9a71-d0c5f5199d3c) from Sidekiq(default) enqueued at 2024-09-25T01:55:32.656335805Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [d1ef40df-21f0-4953-9a71-d0c5f5199d3c] Performed NotificationJob (Job ID: d1ef40df-21f0-4953-9a71-d0c5f5199d3c) from Sidekiq(default) in 2.75ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:55:33 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 8c9cd4bf-8d7d-4012-931e-f35c783982bd) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [8c9cd4bf-8d7d-4012-931e-f35c783982bd] Performing NotificationJob (Job ID: 8c9cd4bf-8d7d-4012-931e-f35c783982bd) from Sidekiq(default) enqueued at 2024-09-25T01:55:33.106165880Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [8c9cd4bf-8d7d-4012-931e-f35c783982bd] Performed NotificationJob (Job ID: 8c9cd4bf-8d7d-4012-931e-f35c783982bd) from Sidekiq(default) in 2.09ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:55:33 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 237e848e-dc2e-4d9f-b530-8f2dbfab89d1) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [237e848e-dc2e-4d9f-b530-8f2dbfab89d1] Performing NotificationJob (Job ID: 237e848e-dc2e-4d9f-b530-8f2dbfab89d1) from Sidekiq(default) enqueued at 2024-09-25T01:55:33.598449621Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [237e848e-dc2e-4d9f-b530-8f2dbfab89d1] Performed NotificationJob (Job ID: 237e848e-dc2e-4d9f-b530-8f2dbfab89d1) from Sidekiq(default) in 4.05ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 01:55:33 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: f32c68ad-4ec9-4c81-a00b-b5271a292994) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [f32c68ad-4ec9-4c81-a00b-b5271a292994] Performing NotificationJob (Job ID: f32c68ad-4ec9-4c81-a00b-b5271a292994) from Sidekiq(default) enqueued at 2024-09-25T01:55:33.911043530Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [f32c68ad-4ec9-4c81-a00b-b5271a292994] Performed NotificationJob (Job ID: f32c68ad-4ec9-4c81-a00b-b5271a292994) from Sidekiq(default) in 3.99ms
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:55:37 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:55:37 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:55:39 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:55:40 +0000
+Started GET "/sidekiq/" for 192.168.255.9 at 2024-09-25 01:55:43 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:55:43 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:55:48 +0000
+Started GET "/sidekiq/queues" for 192.168.255.9 at 2024-09-25 01:55:49 +0000
+Started GET "/sidekiq/" for 192.168.255.9 at 2024-09-25 01:55:52 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:55:52 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:55:53 +0000
+Started GET "/sidekiq" for 192.168.255.9 at 2024-09-25 01:56:25 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:56:25 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 01:56:30 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 01:56:33 +0000
+Started GET "/sidekiq/queues" for 192.168.255.9 at 2024-09-25 01:56:34 +0000
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 01:56:35 +0000
+Started GET "/sidekiq/morgue" for 192.168.255.9 at 2024-09-25 01:56:37 +0000
+Started GET "/sidekiq/metrics" for 192.168.255.9 at 2024-09-25 01:56:38 +0000
+Started GET "/sidekiq/javascripts/metrics.js" for 192.168.255.9 at 2024-09-25 01:56:38 +0000
+Started GET "/sidekiq/morgue" for 192.168.255.9 at 2024-09-25 01:56:39 +0000
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 01:56:40 +0000
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 02:08:22 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: eb7b798f-b702-491c-9224-4300617eb287) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [eb7b798f-b702-491c-9224-4300617eb287] Performing NotificationJob (Job ID: eb7b798f-b702-491c-9224-4300617eb287) from Sidekiq(default) enqueued at 2024-09-25T02:08:22.503123569Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [eb7b798f-b702-491c-9224-4300617eb287] Performed NotificationJob (Job ID: eb7b798f-b702-491c-9224-4300617eb287) from Sidekiq(default) in 9.88ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 02:08:23 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: 0ee77053-3057-4304-a8c3-a42dcd698b05) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [0ee77053-3057-4304-a8c3-a42dcd698b05] Performing NotificationJob (Job ID: 0ee77053-3057-4304-a8c3-a42dcd698b05) from Sidekiq(default) enqueued at 2024-09-25T02:08:23.257773883Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [0ee77053-3057-4304-a8c3-a42dcd698b05] Performed NotificationJob (Job ID: 0ee77053-3057-4304-a8c3-a42dcd698b05) from Sidekiq(default) in 2.82ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 02:08:25 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: aa7e17c5-c54a-43ec-9292-57aeba9a7efb) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [aa7e17c5-c54a-43ec-9292-57aeba9a7efb] Performing NotificationJob (Job ID: aa7e17c5-c54a-43ec-9292-57aeba9a7efb) from Sidekiq(default) enqueued at 2024-09-25T02:08:25.953875297Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [aa7e17c5-c54a-43ec-9292-57aeba9a7efb] Enqueued NotificationJob (Job ID: dc0616b1-878d-4640-a631-974fecead7a7) to Sidekiq(default) at 2024-09-25 02:09:22 UTC with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [aa7e17c5-c54a-43ec-9292-57aeba9a7efb] ↳ app/services/notification_service.rb:22:in `send_notification'
+[ActiveJob] [NotificationJob] [aa7e17c5-c54a-43ec-9292-57aeba9a7efb] Performed NotificationJob (Job ID: aa7e17c5-c54a-43ec-9292-57aeba9a7efb) from Sidekiq(default) in 5.99ms
+Started POST "/notifications" for 192.168.255.9 at 2024-09-25 02:08:27 +0000
+Processing by NotificationsController#create as */*
+  Parameters: {"type"=>"status", "user_id"=>"user2", "message"=>"Hello status", "notification"=>{"type"=>"status", "user_id"=>"user2", "message"=>"Hello status"}}
+[ActiveJob] Enqueued NotificationJob (Job ID: f2e30f2a-522f-4b99-9893-3585651ed4c7) to Sidekiq(default) with arguments: "status", "user2", "Hello status"
+[ActiveJob] ↳ app/controllers/notifications_controller.rb:9:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[ActiveJob] [NotificationJob] [f2e30f2a-522f-4b99-9893-3585651ed4c7] Performing NotificationJob (Job ID: f2e30f2a-522f-4b99-9893-3585651ed4c7) from Sidekiq(default) enqueued at 2024-09-25T02:08:27.315054047Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [f2e30f2a-522f-4b99-9893-3585651ed4c7] Enqueued NotificationJob (Job ID: 3369a7d5-7798-4090-b83b-d66c43413b69) to Sidekiq(default) at 2024-09-25 02:09:23 UTC with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [f2e30f2a-522f-4b99-9893-3585651ed4c7] ↳ app/services/notification_service.rb:22:in `send_notification'
+[ActiveJob] [NotificationJob] [f2e30f2a-522f-4b99-9893-3585651ed4c7] Performed NotificationJob (Job ID: f2e30f2a-522f-4b99-9893-3585651ed4c7) from Sidekiq(default) in 3.62ms
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 02:08:34 +0000
+Started GET "/sidekiq/queues" for 192.168.255.9 at 2024-09-25 02:08:48 +0000
+Started GET "/sidekiq/busy" for 192.168.255.9 at 2024-09-25 02:08:51 +0000
+Started GET "/sidekiq/" for 192.168.255.9 at 2024-09-25 02:08:55 +0000
+Started GET "/sidekiq/stats" for 192.168.255.9 at 2024-09-25 02:08:56 +0000
+Started GET "/sidekiq/queues" for 192.168.255.9 at 2024-09-25 02:08:57 +0000
+Started GET "/sidekiq/retries" for 192.168.255.9 at 2024-09-25 02:08:58 +0000
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 02:09:01 +0000
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 02:09:05 +0000
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 02:09:06 +0000
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 02:09:07 +0000
+Started GET "/sidekiq/queues" for 192.168.255.9 at 2024-09-25 02:09:09 +0000
+Started GET "/sidekiq/scheduled" for 192.168.255.9 at 2024-09-25 02:09:11 +0000
+[ActiveJob] [NotificationJob] [3369a7d5-7798-4090-b83b-d66c43413b69] Performing NotificationJob (Job ID: 3369a7d5-7798-4090-b83b-d66c43413b69) from Sidekiq(default) enqueued at 2024-09-25T02:08:27.322008519Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [dc0616b1-878d-4640-a631-974fecead7a7] Performing NotificationJob (Job ID: dc0616b1-878d-4640-a631-974fecead7a7) from Sidekiq(default) enqueued at 2024-09-25T02:08:25.961293651Z with arguments: "status", "user2", "Hello status"
+[ActiveJob] [NotificationJob] [3369a7d5-7798-4090-b83b-d66c43413b69] Performed NotificationJob (Job ID: 3369a7d5-7798-4090-b83b-d66c43413b69) from Sidekiq(default) in 1.87ms
+[ActiveJob] [NotificationJob] [dc0616b1-878d-4640-a631-974fecead7a7] Performed NotificationJob (Job ID: dc0616b1-878d-4640-a631-974fecead7a7) from Sidekiq(default) in 1.15ms
