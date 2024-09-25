@@ -6,6 +6,10 @@ class NotificationsController < ApplicationController
     user_id = notification_params[:user_id]
     message = notification_params[:message]
 
+    unless NotificationService::RATE_LIMITS.key?(type)
+      return render json: { error: "Invalid notification type: #{type}" }, status: :unprocessable_entity
+    end
+    
     NotificationJob.perform_later(type, user_id, message)
 
     render json: { status: 'Notification scheduled' }, status: :ok
